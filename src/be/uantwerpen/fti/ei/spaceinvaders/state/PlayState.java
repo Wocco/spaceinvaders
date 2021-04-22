@@ -16,7 +16,10 @@ public class PlayState extends GameState{
 
 
     public void input(KeyHandler Key) {
+        if(Key.up.down){
+            System.out.println("W is being pressed");
 
+        }
     }
 
 
