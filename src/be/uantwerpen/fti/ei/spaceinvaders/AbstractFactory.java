@@ -5,5 +5,4 @@ import graphics.J2dFactory;
 //abstract factorie maakt factories
 public abstract class AbstractFactory {
 
-
 }
