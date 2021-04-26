@@ -20,7 +20,7 @@ public class Sprite {
         w=TILE_SIZE;
         h=TILE_SIZE;
 
-        System.out.println("loading: "+file+"...");
+        //System.out.println("loading: "+file+"...");
         SPRITESHEET=loadSprite(file);
     }
 
@@ -31,7 +31,7 @@ public class Sprite {
     this.w=w;
     this.h=h;
 
-    System.out.println("Loading: "+file+" ..");
+    //System.out.println("Loading: "+file+" ..");
     SPRITESHEET=loadSprite(file);
 
     wSprite=SPRITESHEET.getWidth()/w;

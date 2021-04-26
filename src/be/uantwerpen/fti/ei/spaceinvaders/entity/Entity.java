@@ -1,5 +1,7 @@
 package be.uantwerpen.fti.ei.spaceinvaders.entity;
 
+import java.awt.image.BufferedImage;
+
 public abstract class Entity {
     int x=0;     //place x
     int y=0;     //place y
@@ -33,7 +35,11 @@ public abstract class Entity {
     }
 
     public void setX(int x) {
-        this.x = x;
+        if(x>12||x<0){
+            //do nothing
+        }
+        else{
+        this.x = x;}
     }
 
     public void setY(int y) {
@@ -43,6 +49,9 @@ public abstract class Entity {
     abstract String getEntity();
     abstract int getDirection();
     abstract public void visualize() ;
+    abstract public int getWidth();
+    abstract public int getHeight();
+    abstract public BufferedImage giveBufferedImage();
 
 
 }
