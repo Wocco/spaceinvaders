@@ -8,9 +8,13 @@ import java.awt.image.BufferedImage;
 import java.nio.Buffer;
 
 public class J2dEnemyShip extends EnemyShip {
-    Sprite sprite = new Sprite("alien.png", 16, 16);
-    int width=160;
-    int height=90;
+    int width=64;
+    int height=64;
+    int widthEnemyShip=54;
+    int heightEnemyship=54;
+    Sprite sprite = new Sprite("alien.png", widthEnemyShip, heightEnemyship);
+
+
 
 
     @Override
@@ -23,6 +27,14 @@ public class J2dEnemyShip extends EnemyShip {
     public int getHeight(){
         return height;
     }
+    public int getWidthEnemyShip(){
+        return widthEnemyShip;
+    }
+    public int getHeightEnemyship(){
+        return heightEnemyship;
+    }
+
+
 
     public void setWidth(int newWidth){
         this.width=newWidth;
@@ -30,10 +42,14 @@ public class J2dEnemyShip extends EnemyShip {
     public void setHeight(int newHeight){
         this.height=newHeight;
     }
-
-    public Sprite giveSprite(){
-        return sprite = new Sprite("alien.png", 16, 16);
+    public void setwidthEnemyShip(int widthEnemyShip){
+        this.widthEnemyShip=widthEnemyShip;
     }
+    public void setheightEnemyship(int heightEnemyship){
+        this.heightEnemyship=heightEnemyship;
+    }
+
+
     public BufferedImage giveBufferedImage(){
         BufferedImage bufferedImage=null;
         return bufferedImage=sprite.loadSprite("alien.png");

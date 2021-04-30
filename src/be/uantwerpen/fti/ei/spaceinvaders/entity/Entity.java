@@ -3,8 +3,8 @@ package be.uantwerpen.fti.ei.spaceinvaders.entity;
 import java.awt.image.BufferedImage;
 
 public abstract class Entity {
-    int x=0;     //place x
-    int y=0;     //place y
+    int x=0;     //place x from 0 to 9
+    int y=0;     //place y from 0 to 9
     int dx = 0;  //movement x
     int dy=0;    //movement y
 
@@ -35,8 +35,11 @@ public abstract class Entity {
     }
 
     public void setX(int x) {
-        if(x>12||x<0){
+        if(x>9){
             //do nothing
+        }
+        else if(x<0){
+
         }
         else{
         this.x = x;}

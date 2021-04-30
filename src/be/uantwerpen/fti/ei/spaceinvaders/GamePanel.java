@@ -54,10 +54,10 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void run(){
         init();
-        final double GAME_HERTZ=30.0;
-        final double TBU=1000000000/GAME_HERTZ;//time before update
+        final double GAME_HERTZ=2;
+        final double TBU= 2_00_000_000 /GAME_HERTZ;//time before update
 
-        final int MUBR=5; //most updates before render
+        final int MUBR=1; //most updates before render
 
         double lastUpdateTime=System.nanoTime();
         double lastRenderTime;
@@ -85,7 +85,7 @@ public class GamePanel extends JPanel implements Runnable {
             if(now-lastUpdateTime>TBU){
                 lastUpdateTime=now-TBU;
             }
-            input(key);
+
             render();
             draw();
             lastRenderTime=now;
@@ -107,7 +107,6 @@ public class GamePanel extends JPanel implements Runnable {
                 Thread.sleep(1);
                 }catch(Exception e){
                     System.out.println("Error yielding thread");
-
                 }
                 now=System.nanoTime();
             }

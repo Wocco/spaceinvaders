@@ -10,5 +10,6 @@ public abstract class EnemyEntity extends Entity {
     public int getDirection(){
         return direction;
     }
+
     abstract public void visualize() ;
 }
