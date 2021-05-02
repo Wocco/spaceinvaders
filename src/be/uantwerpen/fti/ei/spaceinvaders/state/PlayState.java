@@ -68,15 +68,12 @@ public class PlayState extends GameState{
     public void render(Graphics2D g) {
         //Sprite.drawArray(g,font,"GAME OVER",new Vector2d(100,100),32,32,32,0);
 
-
             //Sprite.drawArray(g, plane1.giveBufferedImage(),plane1.getWidth(),plane1.getHeight(), plane1.getX()*plane1.getWidth(), plane1.getY()*plane1.getHeight());
         //for(int i=0;i<10;i++){
         //Sprite.drawArray(g, enemys[i].giveBufferedImage(),64,64, enemys[i].getX()*enemys[i].getWidth(), enemys[i].getY()*enemys[i].getHeight());
           //  System.out.println(enemys[i].getX());
         //}
-
         for(int i=0;i<horde.size();i++) {
-
                 Sprite.drawArray(g, horde.get(i).giveBufferedImage(), horde.get(i).getWidthEnemyShip(), horde.get(i).getHeightEnemyship(), horde.get(i).getX() * horde.get(i).getWidth(), horde.get(i).getY() * horde.get(i).getHeight());
             }
 
